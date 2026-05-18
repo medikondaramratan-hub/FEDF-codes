@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Error Handling</title>
+</head>
+<body>
+
+<h2>Error Handling Demo</h2>
+
+<button onclick="divide()">Divide</button>
+
+<p id="output"></p>
+
+<script>
+
+function divide() {
+
+  try {
+
+    let a = 10;
+    let b = 2;
+
+    if(b === 0) {
+      throw new Error("Cannot divide by zero");
+    }
+
+    let result = a / b;
+
+    document.getElementById("output").innerHTML = result;
+
+  } catch(error) {
+
+    document.getElementById("output").innerHTML =
+      error.message;
+  }
+}
+
+</script>
+
+</body>
+</html>

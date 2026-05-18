@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pure Function Example</title>
+</head>
+<body>
+
+<h2>Pure Function Example</h2>
+
+<button onclick="calculate()">
+  Calculate
+</button>
+
+<p id="output"></p>
+
+<script>
+
+  // Pure Function
+
+  function calculateTotal(price, tax) {
+
+    return price + tax;
+  }
+
+  function calculate() {
+
+    // Same Inputs
+
+    const result1 = calculateTotal(100, 10);
+
+    const result2 = calculateTotal(100, 10);
+
+    // Display Output
+
+    document.getElementById("output").innerHTML =
+      `
+      First Call: ${result1} <br>
+      Second Call: ${result2}
+      `;
+  }
+
+</script>
+
+</body>
+</html>

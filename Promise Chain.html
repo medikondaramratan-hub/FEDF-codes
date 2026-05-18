@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Classes</title>
+</head>
+<body>
+<h2>JavaScript Class Example</h2>
+<button onclick="showDetails()">
+  Show Details
+</button>
+<p id="output"></p>
+<script>
+  // Class Creation
+  class Student {
+    // Constructor
+    constructor(name, regno, course) {
+      this.name = name;
+      this.regno = regno;
+      this.course = course;
+    }
+    // Method
+    display() {
+      return `
+        Name: ${this.name} <br>
+        Registration  Number: ${this.regno} <br>
+        Course: ${this.course}
+      `;
+    }
+  }
+  // Object Creation
+  const student1 = new Student(
+    "Srinivas",
+    2520030001,
+    "React JS"
+  );
+  // Function
+  function showDetails() {
+    document.getElementById("output").innerHTML =
+      student1.display();
+  }
+</script>
+</body>
+</html>

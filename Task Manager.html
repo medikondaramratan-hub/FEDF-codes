@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Functional Programming</title>
+</head>
+<body>
+<h2>Functional Programming Demo</h2>
+<button onclick="calculate()">Calculate</button>
+<p id="result"></p>
+<script>
+const prices = [100, 200, 300, 400];
+function calculate() {
+
+  const discounted = prices.map(price => price * 0.9);
+
+  const total = discounted.reduce((sum, item) => sum + item, 0);
+
+  document.getElementById("result").innerHTML =
+    `Discounted Prices: ${discounted}<br>Total: ${total}`;
+}
+
+</script>
+
+</body>
+</html>

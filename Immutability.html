@@ -1,0 +1,17 @@
+<html>
+<body>
+<h2>Async Programming Example</h2>
+<button onclick="loadData()">Load Data</button>
+<p id="result"></p>
+<script>
+function loadData() {
+    document.getElementById("result").textContent = "Loading data after 3 seconds...";
+    //setTimeout(function() {..},t ms)
+    setTimeout(function() {
+        document.getElementById("result").textContent =
+            "HELLO DATA!";
+    }, 3000);
+}
+</script>
+</body>
+</html>

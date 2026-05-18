@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Destructuring Example</title>
+</head>
+<body>
+<h2>JavaScript Destructuring</h2>
+<button onclick="showData()">Show Data</button>
+<p id="output"></p>
+<script>
+function showData() {
+  // Object
+  const student = {
+    name: "Srinivas",
+    regno: 2520030001,
+    course: "React JS"
+  };
+  // Destructuring Object
+  const { name, regno, course } = student;
+  // Array
+  const marks = [80, 90, 95];
+  // Destructuring Array
+  const [m1, m2, m3] = marks;
+
+  // Display Output
+  document.getElementById("output").innerHTML =
+    `    Name: ${name} <br>
+    Registration Number: ${regno} <br>
+    Course: ${course} <br><br>
+    Marks 1: ${m1} <br>
+    Marks 2: ${m2} <br>
+    Marks 3: ${m3}
+    `;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Non-Pure Function</title>
+</head>
+<body>
+
+<h2>Non-Pure Function Example</h2>
+
+<button onclick="showResult()">
+  inc()
+</button>
+
+<p id="output"></p>
+
+<script>
+
+  // External Variable
+
+  let c = 0;
+
+  // Non-Pure Function
+
+  function inc() {
+
+    c++;
+
+    return c;
+  }
+
+  function showResult() {
+
+    // Calling same function again
+
+    const result1 = inc();
+
+    const result2 = inc();
+
+    // Display Output
+
+    document.getElementById("output").innerHTML =
+      `
+      First Call: ${result1} <br>
+      Second Call: ${result2}
+      `;
+  }
+
+</script>
+
+</body>
+</html>
